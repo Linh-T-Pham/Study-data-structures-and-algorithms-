@@ -140,10 +140,24 @@ def make_bst(nums):
     Returns the root node of a new BST that is valid and balanced.
     """
     """Build a binary search tree from a list"""
+
+    """find the middle point in the list"""
+
+    mid_point = len(nums) // 2
+
+    """create new node for mid_point"""
+
+    new_node = BinaryNode(nums[mid_point])
+
+    """Added the left size for the tree"""
+
+    left_nodes = make_bst(nums[:mid_point])
+    right_nodes = make_bst(nums[mid_point:])
+
+    return new_node
+
     
    
-
-
 
 
 if __name__ == '__main__':
