@@ -18,6 +18,9 @@ of 1-100, this should never be more than 7.
     >>> binary_search(31) <= 7
     True
 
+    >>> binary_search(100) <= 7
+    1
+
     >>> max([binary_search(i) for i in range(1, 101)])
     7
 """
@@ -29,12 +32,14 @@ def binary_search(val):
 
     num_searches = 0
     guess = None
+
+
     higher_than = 0
     lower_than = 101
 
     while guess != val:
         num_searches += 1
-        guess = (lower_than - higher_than) // 2 
+        guess = (lower_than - higher_than) // 2 + higher_than
 
         if val > guess:
             higher_than = guess
@@ -42,6 +47,8 @@ def binary_search(val):
             lower_than = guess 
 
     return num_searches
+
+
 
 
 
