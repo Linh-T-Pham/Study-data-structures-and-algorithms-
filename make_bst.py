@@ -142,6 +142,8 @@ def make_bst(nums):
     """Build a binary search tree from a list"""
 
     """find the middle point in the list"""
+    if not nums:
+        return None
 
     mid_point = len(nums) // 2
 
@@ -151,8 +153,8 @@ def make_bst(nums):
 
     """Added the left size for the tree"""
 
-    left_nodes = make_bst(nums[:mid_point])
-    right_nodes = make_bst(nums[mid_point:])
+    new_node.left = make_bst(nums[:mid_point])
+    new_node.right = make_bst(nums[mid_point + 1:])
 
     return new_node
 
