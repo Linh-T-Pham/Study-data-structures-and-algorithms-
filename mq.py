@@ -1,10 +1,10 @@
 def numMagicSquaresInside(grid):
     
     ct = 0
-    for i in range(0,len(grid)-2):
-        for j in range(0,len(grid[i])-2):
-            strs = grid[i][j:j+3] +  grid[i+1][j:j+3] + grid[i+2][j:j+3]
-            t = set(strs)
+    for i in range(0,len(grid)-2): # i is each row in grid
+        for j in range(0,len(grid[i])-2): # j is each item in i 
+            strs = grid[i][j:j+3] +  grid[i+1][j:j+3] + grid[i+2][j:j+3] # Find the contignous 3 numbers in the array
+            t = set(strs) # covert strs list to  a set 
             mx,mn = max(t),min(t)
             if(len(t)==9 and mx==9 and mn==1):
                 diag1 = grid[i+1][j+1] + grid[i][j] + grid[i+2][j+2]
