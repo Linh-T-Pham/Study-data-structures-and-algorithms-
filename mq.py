@@ -8,10 +8,18 @@ def numMagicSquaresInside(grid):
             mx,mn = max(t),min(t)
             if(len(t)==9 and mx==9 and mn==1):
                 diag1 = grid[i+1][j+1] + grid[i][j] + grid[i+2][j+2]
+
+                # diag1 = 5 + 4 + 6 = 15
+
                 diag2 = grid[i][j+2] + grid[i+1][j+1] + grid[i+2][j]
+                # Find sum of each row 
+                
+                # diag2 = 8 + 5 + 2 = 15
+
                 row1= sum(grid[i][j:j+3])
                 row2= sum(grid[i+1][j:j+3])
                 row3= sum(grid[i+2][j:j+3]) 
+
                 col1=grid[i][j]+grid[i+1][j]+grid[i+2][j]
                 col2=grid[i][j+1]+grid[i+1][j+1]+grid[i+2][j+1]
                 col3=grid[i][j+2]+grid[i+1][j+2]+grid[i+2][j+2]
@@ -19,6 +27,7 @@ def numMagicSquaresInside(grid):
                   ct+=1
     return ct
 
-print(numMagicSquaresInside([[4,3,8,4],
+print(numMagicSquaresInside
+      ([[4,3,8,4],
         [9,5,1,9],
         [2,7,6,2]]))
