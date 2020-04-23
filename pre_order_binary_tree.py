@@ -49,26 +49,26 @@ def bstFromPreorder(preorder):
 
 
 
-class Solution:
-    def bstFromPreorder(self, preorder: List[int]) -> TreeNode:
-        if not preorder:
-            return None
-        root = TreeNode(preorder[0])
-        i = 1
-        while i<len(preorder) and  preorder[i] < root.val:
-            i+=1
-        root.left = self.bstFromPreorder(preorder[1:i])
-        root.right = self.bstFromPreorder(preorder[i:])
-        return root
+# class Solution:
+#     def bstFromPreorder(self, preorder: List[int]) -> TreeNode:
+#         if not preorder:
+#             return None
+#         root = TreeNode(preorder[0])
+#         i = 1
+#         while i<len(preorder) and  preorder[i] < root.val:
+#             i+=1
+#         root.left = self.bstFromPreorder(preorder[1:i])
+#         root.right = self.bstFromPreorder(preorder[i:])
+#         return root
 
-i=2
-root = 8
-root.left = recur w/ [5,1,7]
-root.right = recur w/ [10,12]
+# i=2
+# root = 8
+# root.left = recur w/ [5,1,7]
+# root.right = recur w/ [10,12]
 
-newtree = bstFromPreorder([8,5,1,7,10,12])
-print(newtree.val)
-print(newtree.right.left)
+# newtree = bstFromPreorder([8,5,1,7,10,12])
+# print(newtree.val)
+# print(newtree.right.left)
 
 
 
