@@ -1,20 +1,23 @@
 """
-Count the number of items in a list, using recursion.
+    Count the number of items in a list, using recursion.
 
 
 For example:
 
     >>> count_recursively([])
-0
+    0
 
->>> count_recursively([1, 2, 3])
-3
+    >>> count_recursively([1, 2, 3])
+    3
 
 """
 
 def count_recursively(lst):
     """Return number of items in a list, using recursion."""
+    if len(lst) == 0:
+        return 0
 
+    return 1 + count_recursively(lst[1:])
 
 
 
