@@ -38,3 +38,8 @@ def recursive_idx(needle, haystack, start=0):
     
     # start += 1
     return recursive_idx(needle, haystack, start + 1)
+
+
+# for recusive call, we start with default agrument and then we increment it so 
+# it will be just On time and space
+# n is the number of recursive calls and the length of the list 
