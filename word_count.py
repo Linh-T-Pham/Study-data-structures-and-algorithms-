@@ -46,6 +46,7 @@ def word_count(phrase):
 word_count("berry cherry cherry cherry berry apple")
 word_count("hey hi hello")
 word_count("hi Hi hi")
+world_count("linh Linh")
 
 
 if __name__ == '__main__':
