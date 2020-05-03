@@ -21,11 +21,11 @@
 
 """
 
-# Create a function take 2 arguments (char, array, start=0)
-# array is not empty
-# base case: 
-# 1. found it --> return idx
-# 2. reached end of list, and didn't find it --> return None
+Create a function take 2 arguments (char, array, start=0)
+array is not empty
+base case: 
+1. found it --> return idx
+2. reached end of list, and didn't find it --> return None
 
 
 
