@@ -39,6 +39,7 @@ def find_small_differnce(array1, array2):
             index2 += 1
 
         else:
+            
             return [first_num, second_num]
 
         if smallest > current:
