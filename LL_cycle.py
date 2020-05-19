@@ -25,6 +25,19 @@ class LinkedListNode(object):
         self.value = value
         self.next  = None
 
+def contains_cycle(first_node):
+    current_1 = first_node
+    current_2 = first_node
+
+    while current_2 is not None and current_2.next is not None:
+        current_1 = current_1.next
+        current_2 = current_2.next.next
+        if current_1 is current_2:
+            return True
+    return False
+
+
+
 
 
 
