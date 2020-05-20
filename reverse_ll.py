@@ -42,3 +42,49 @@ def reverse(head):
 
 
 # main()
+
+
+def reverselinkedlist(head):
+    current = head # (3-4-5-6-None)
+    next = None
+    previous = None
+    
+    while current:
+        next = current.next # save the value of current.next for later use
+        current.next = previous # replace the value current.next with previous 
+        previous = current 
+        current = next # go back to the initial value of current.next
+    
+        
+    return previous
+
+
+    
+    """
+    3->4->5->6->None
+    
+    1st iteration
+    next = 4 -> 5 -> 6 -> None
+    current.next = None # 3->None
+    previous = 3 -> None
+    current = 4 -> 5 -> 6 -> None
+
+    2nd iteration
+    next = 5 -> 6 -> None
+    current.next = 3 -> None # current + current.next 4-3-none
+    previous = 4 -> 3 -> None
+    current = 5 -> 6 -> None
+        
+    3rd iteration
+    next = 6 -> None
+    current.next = 4 -> 3 -> None 
+    previous = 5 -> 4 -> 3 -> None
+    current = 6 -> None
+    
+    4th iteration
+    next = None
+    current.next = 5 -> 4 -> 3 -> None 
+    previous = 6 -> 5 -> 4 -> 3 -> None
+    current = None
+    
+    """
