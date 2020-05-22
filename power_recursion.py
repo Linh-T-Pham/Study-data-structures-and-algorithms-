@@ -13,4 +13,5 @@ def power(a,n):
 
 
 print(power(2,5))
-  
+print(power(3,4))
+print(power(2,6))
