@@ -15,6 +15,8 @@ class doublylinkedlist():
 def search_node(self, value):
     node = self.head
     while node is not None and node.value != value: 
+        node = node.next 
+    return node is not None 
 
 
 #REMOVING Node with value METHOD

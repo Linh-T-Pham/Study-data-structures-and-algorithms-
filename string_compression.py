@@ -29,7 +29,7 @@ def string_compression(string):
             new_string_lst.append(current_letter)
             new_string_lst.append(str(letter_count))
             current_letter = string[idx]
-            letter_count = 1
+            letter_count = 1 # reset 
 
     new_string_lst.append(current_letter)
     new_string_lst.append(str(letter_count))

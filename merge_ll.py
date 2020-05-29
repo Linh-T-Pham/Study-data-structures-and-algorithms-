@@ -65,19 +65,7 @@ def merge_ll(head1, head2):
 
 
 
-
-
-
-
-
-
-    
-
-    
-
       
-  
-        
 head_one = Node(2)
 head_one.next = Node(6)
 head_one.next.next = Node(7)
