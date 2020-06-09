@@ -57,3 +57,68 @@ if __name__ == '__main__':
     if doctest.testmod().failed == 0:
         print("\n*** ALL TESTS PASSED. YOU'RE TERRIFIC AT THIS!\n")
 
+
+# Given a sorted (in ascending order) integer array nums of n elements and a target value, write a function to search target in nums. If target exists, then return its index, otherwise return -1.
+
+
+# Example 1:
+
+# Input: nums = [-1,0,3,5,9,12], target = 9
+# Output: 4
+# Explanation: 9 exists in nums and its index is 4
+
+# Example 2:
+
+# Input: nums = [-1,0,3,5,9,12], target = 2
+# Output: -1
+# Explanation: 2 does not exist in nums so return -1
+
+'''
+naive solution to loop through list, return index of element that matches the target
+if exiting loop then return -1 for not found in list
+
+binary search solution:
+hold index in variable. set it to the length of the list // 2
+loop until
+base case is
+'''
+
+
+def search(nums, target):
+    left = 0
+    right = len(nums) - 1
+    center = (right + left) // 2
+    if nums[left] == target:
+        return left
+    if nums[right] == target:
+        return right
+    while left + 1 < right:
+        if nums[center] == target:
+            return center
+        if nums[center] < target:
+            left = center
+        else:
+            right = center
+        center = (right + left) // 2
+    return -1
+
+print(search([-1,0,3,5,9,12], -1))
+print(search([-1,0,3,5,9,12], 9))
+print(search([-1,0,3,5,9,12], 2))
+print(search([-1,0,3,5,9,12], 0))
+print(search([-1,0,3,5,9,12], 12))
+
+
+# class Solution:
+#     def search(self, nums: List[int], target: int) -> int:
+#         left, right = 0, len(nums) - 1
+#         while left <= right:
+#             pivot = left + (right - left) // 2
+#             if nums[pivot] == target:
+#                 return pivot
+#             if target < nums[pivot]:
+#                 right = pivot - 1
+#             else:
+#                 left = pivot + 1
+#         return -1
+
