@@ -14,5 +14,5 @@ class Solution:
                 
         return nums
     
-    def swap(i, j, nums):
-        nums[i], nums[j] = nums[j], nums[i]
+    # def swap(i, j, nums):
+    #     nums[i], nums[j] = nums[j], nums[i]
