@@ -6,3 +6,13 @@
 # Sifting integers up and down the heap, which is to be used when
 # inserting and revmong values 
 # Note that heap should be represented in the form of an array
+
+# class MinHeap:
+#     def __init__(self, array):
+#         self.heap = self.build_heap(array)
+
+#     def peek(self):
+#         return self.heap[0]
+
+#     def swap(self, i, j, heap):
+#         heap[i], heap[j] = heap[j], heap[i]
