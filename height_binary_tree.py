@@ -25,7 +25,9 @@ def find_height_BT(node):
 
 
 tree = Node(5)
-tree.node.left = Node(6)
-tree.node.right = Node(2)
-tree.node.left.left = Node(7)
-tree.node.right.right = Node(10)
+tree.left = Node(6)
+tree.right = Node(2)
+tree.left.left = Node(7)
+tree.right.right = Node(10)
+
+print("the height is %d" %(find_height_BT(tree)))
